@@ -1,0 +1,6 @@
+<mat-card class="note">
+  <div class="icon" *ngIf="iconName">
+      <mat-icon class="grey-icon" fontIcon="{{ iconName }}"></mat-icon>
+  </div>
+  <div *ngIf="!iconName" class="note__text">{{ note.content }}</div>
+</mat-card>

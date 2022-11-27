@@ -1,0 +1,27 @@
+.note {
+  max-width: 300px;
+  min-height: 200px;
+  text-align: center;
+  overflow-wrap: break-word;
+  background-color: #fffcf0;
+  &__text {
+    padding: 10px;
+  }
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  min-height: 200px;
+}
+
+.grey-icon {
+  color: gray;
+}
+
+mat-icon {
+  transform: scale(5);
+}

@@ -14,7 +14,19 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@notepad/notepad/data-access": ["libs/notepad/data-access/src/index.ts"],
+      "@notepad/notepad/feature-note-board": [
+        "libs/notepad/feature-note-board/src/index.ts"
+      ],
+      "@notepad/notepad/shell": ["libs/notepad/shell/src/index.ts"],
+      "@notepad/notepad/ui-add-note": ["libs/notepad/ui-add-note/src/index.ts"],
+      "@notepad/notepad/ui-form-note": [
+        "libs/notepad/ui-form-note/src/index.ts"
+      ],
+      "@notepad/notepad/ui-note": ["libs/notepad/ui-note/src/index.ts"],
+      "@notepad/ui-note": ["libs/ui-note/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

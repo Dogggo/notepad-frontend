@@ -1,0 +1,44 @@
+<form [formGroup]="form" class="container">
+  <mat-grid-list cols="2" rowHeight="4rem" gutterSize="50%">
+    <mat-grid-tile>
+      <mat-hint align="end"
+        >{{ content.value.length || 0 }}/{{ maxCharacters }}</mat-hint
+      >
+    </mat-grid-tile>
+    <mat-grid-tile *ngIf="modalData.data">
+      <div class="delete">
+        <button
+          class="mat-button delete__button"
+          mat-icon-button
+          (click)="handleDelete(modalData.data.id)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div class="note-content">
+    <textarea #note formControlName="content"></textarea>
+    <mat-error *ngIf="content.errors?.['maxlength']">
+      Name cannot be longer than {{ maxCharacters }} characters!
+    </mat-error>
+  </div>
+  <mat-grid-list class="buttons" cols="2" rowHeight="2rem">
+    <mat-grid-tile>
+      <button class="discard-button" mat-button (click)="handleDiscard()">
+        Discard
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button
+        class="save-button"
+        mat-button
+        [mat-dialog-close]="form.value"
+        [disabled]="form.invalid"
+        (click)="handleSave()"
+      >
+        Save note
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>
