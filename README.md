@@ -22,3 +22,4 @@ Angular CLI: 15.0.1
 Node: 16.17.0
 rxjs: 7.5.7
 typescript: 4.8.4
+npm: 8.15.0
