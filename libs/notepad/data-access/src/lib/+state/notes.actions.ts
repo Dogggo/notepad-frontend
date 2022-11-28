@@ -31,7 +31,7 @@ export const createNoteFailure = createAction(
 
 export const updateNote = createAction(
   '[Notes/API] Update Note',
-  props<{ note: NotesEntity, id: number }>()
+  props<{ note: NotesEntity; id: number }>()
 );
 
 export const updateNoteSuccess = createAction(
@@ -58,4 +58,3 @@ export const deleteNoteFailure = createAction(
   '[Notes/API] Delete Note Failure',
   props<{ error: any }>()
 );
-

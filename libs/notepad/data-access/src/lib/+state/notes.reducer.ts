@@ -22,7 +22,6 @@ export const notesAdapter: EntityAdapter<NotesEntity> =
   });
 
 export const initialNotesState: NotesState = notesAdapter.getInitialState({
-  // set initial required properties
   state: [],
   loaded: false,
   error: null,
@@ -57,19 +56,19 @@ const reducer = createReducer(
     error,
   })),
   on(NotesActions.updateNoteSuccess, (state, { update }) => {
-    return notesAdapter.updateOne(update, { ...state, loaded: true })
-  }),  
+    return notesAdapter.updateOne(update, { ...state, loaded: true });
+  }),
   on(NotesActions.updateNoteFailure, (state, { error }) => ({
     ...state,
     error,
   })),
   on(NotesActions.deleteNoteSuccess, (state, { id }) => {
-    return notesAdapter.removeOne(id, { ...state, loaded: true })
-  }),  
+    return notesAdapter.removeOne(id, { ...state, loaded: true });
+  }),
   on(NotesActions.deleteNoteFailure, (state, { error }) => ({
     ...state,
     error,
-  })),
+  }))
 );
 
 export function notesReducer(state: NotesState | undefined, action: Action) {

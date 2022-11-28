@@ -1,11 +1,17 @@
 <div class="notepad">
-  <div type="button" class="note" (click)="openModal('edit', note)" *ngFor="let note of (notes$ | async);">
-    <notepad-notepad-ui-note 
-    class="mat-elevation-z8" 
-    [note]="note"></notepad-notepad-ui-note>
+  <div
+    type="button"
+    class="note"
+    (click)="openModal('edit', note)"
+    *ngFor="let note of notes$ | async"
+  >
+    <notepad-notepad-ui-note
+      class="mat-elevation-z8"
+      [note]="note"
+    ></notepad-notepad-ui-note>
   </div>
   <div class="note" type="button" (click)="openModal('save')">
     <notepad-notepad-ui-add-note class="mat-elevation-z8">
     </notepad-notepad-ui-add-note>
-  </div >
+  </div>
 </div>

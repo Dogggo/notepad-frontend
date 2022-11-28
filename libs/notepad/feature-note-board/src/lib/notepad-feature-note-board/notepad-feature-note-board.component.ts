@@ -18,7 +18,10 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';
-import { ModalInterface, NotepadUiFormNoteComponent } from '@notepad/notepad/ui-form-note';
+import {
+  ModalInterface,
+  NotepadUiFormNoteComponent,
+} from '@notepad/notepad/ui-form-note';
 
 const imports = [
   CommonModule,
